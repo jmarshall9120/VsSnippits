@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<CodeSnippets  
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippet Format="1.0.0">  
+        <Header>  
+            <Title>Property Getter</Title>
+            <Shortcut>prop</Shortcut>
+            <Description>Creates a getter for a property</Description>
+            <Author>Jamie Marshall</Author>
+            <SnippetTypes>
+                <SnippetType>SurroundsWithStatement</SnippetType>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>  
+        <Snippet> 
+            <Declarations>
+                <Literal>
+                    <ID>PropertyName</ID>
+                    <ToolTip>Name of your property</ToolTip>
+                    <Default>property</Default>
+                </Literal>
+            </Declarations> 
+            <Code Language="python">  
+                <![CDATA[@property 
+def $PropertyName$(self):
+    return self.__$PropertyName$
+$end$]]>
+                </Code>  
+            </Snippet>
+    </CodeSnippet>  
+</CodeSnippets> 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<CodeSnippets  
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippet Format="1.0.0">  
+        <Header>  
+            <Title>Def Test With Doc String And Directory Set To Config File</Title>
+            <Shortcut>deft</Shortcut>
+            <Description>Creates Def Test with Doc String And a os.chdir statement that sets the current directory to the default in UnitTestConstants.CodeRootWorkingDirectory</Description>
+            <Author>Jamie Marshall</Author>
+            <SnippetTypes>
+                <SnippetType>SurroundsWithStatement</SnippetType>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>  
+        <Snippet> 
+            <Declarations>
+                <Literal>
+                    <ID>FunctionName</ID>
+                    <ToolTip>Name of your function or method</ToolTip>
+                    <Default>function</Default>
+                </Literal>
+                <Literal>
+                    <ID>Outcome</ID>
+                    <ToolTip>Success or Fail</ToolTip>
+                    <Default>Success</Default>
+                </Literal>
+            </Declarations> 
+            <Code Language="python">  
+                <![CDATA[def test_$FunctionName$_$Outcome$(self): 
+    """docstring"""
+
+    #Setup Test
+    $end$
+    
+    #Test
+    self.fail("Not implemented")
+
+    #Teardown Test
+
+
+    return
+    ]]>
+                </Code>  
+            </Snippet>
+    </CodeSnippet>  
+</CodeSnippets> 

@@ -3,9 +3,9 @@
     xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
     <CodeSnippet Format="1.0.0">  
         <Header>  
-            <Title>Def With Doc String</Title>
-            <Shortcut>defd</Shortcut>
-            <Description>Creates Def function with Doc String</Description>
+            <Title>Test Class Teardown</Title>
+            <Shortcut>deftdc</Shortcut>
+            <Description>Creates teardown class function for unit test case</Description>
             <Author>Jamie Marshall</Author>
             <SnippetTypes>
                 <SnippetType>SurroundsWithStatement</SnippetType>
@@ -14,20 +14,10 @@
         </Header>  
         <Snippet> 
             <Declarations>
-                <Literal>
-                    <ID>FunctionName</ID>
-                    <ToolTip>Name of your function or method</ToolTip>
-                    <Default>function</Default>
-                </Literal>
-                <Literal>
-                    <ID>ArgsList</ID>
-                    <ToolTip>List of arguments</ToolTip>
-                    <Default>self</Default>
-                </Literal>
             </Declarations> 
             <Code Language="python">
-<![CDATA[#
-def $FunctionName$($ArgsList$): 
+<![CDATA[@classmethod
+def tearDownClass(cls): 
     """docstring"""
 
     $end$
